@@ -1,0 +1,18 @@
+
+
+#banner {
+    height: 100vh;
+    background-image: url('/assets/herobg.jpeg');
+    background-size: cover;
+    position: relative;
+
+
+    .hero_desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+    }
+}

@@ -1,0 +1,45 @@
+
+
+  <nav class="navbar navbar-expand-lg  fixed-top navbarScroll">
+    
+    <a class="navbar-brand" > <img [src] ="brandImg" [alt] =  "" height="50" width="60px"> </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar
+    " aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item ">
+                <a class="nav-link" routerLink="" routerLinkActive="active"> {{ home }} <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/service" routerLinkActive="active">{{ services }} </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/about" routerLinkActive="active">  {{ about }} </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/contact"   routerLinkActive="active">{{ contact }} </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" routerLinkActive="active"> {{ login }} </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" routerLink="/deconnexion" href="#">Déconexion</a></li>
+                    <li><a class="dropdown-item" routerLink="/profile" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" routerLink="/change-password">Changer de mot de pass </a></li>
+                  </ul>
+                  
+                
+            </li>
+        </ul>
+        
+    </div>
+
+
+</nav>
+
+<router-outlet></router-outlet>
+
+
+

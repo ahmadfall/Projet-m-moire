@@ -1,0 +1,84 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="submit()"  enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-sm-4">
+                <img [src]="signupAvatar" alt="">
+            </div>
+            <div class="col-sm-4 offset-sm-3">
+               
+               
+        
+           
+                               <!--Nombre de place -->
+            
+                <div class="form-group">
+                    <label for="name">Nombre du service</label>
+                    <input
+                        formControlName="Name_Service"
+                        id="Name_Service"
+                        type="text"
+                        class="form-control">
+                    <div *ngIf="f['Name_Service'].touched && f['Name_Service'].invalid" class="alert alert-danger">
+             
+              
+                    </div>
+                </div>
+
+                
+            
+        
+       
+        
+                      <!--Prix du service-->
+            
+                <div class="form-group">
+                    <label for="Prix_du_service">Prix_du_service</label>
+                    <input
+                        formControlName="Prix_du_service"
+                        id="Prix_du_service"
+                        type="number"
+                        class="form-control">
+                    <div *ngIf="f['Prix_du_service'].touched && f['Prix_du_service'].invalid" class="alert alert-danger">
+                    </div>
+                </div>
+
+                         <!--Image du Service-->
+
+                    <label for="image_du_service">Image</label>
+                    <input type="file" id="image_du_service" name="image"  formControlName="image_du_service"  class="form-control">
+
+                      <!--Nombre de place-->
+
+                    <div class="form-group">
+                        <label for="nbre_place">nbre_place</label>
+                        <input
+                            formControlName="nbre_place"
+                            id="nbre_place"
+                            type="number"
+                            class="form-control">
+                        <div *ngIf="f['nbre_place'].touched && f['nbre_place'].invalid" class="alert alert-danger">
+                        </div>
+
+                          <!--Heure de depqrt-->
+
+                          <label for="heure_depart">heure_depart</label>
+                        <input type="datetime-local" name="heure_depart"formControlName="nbre_place" id="heure_depart" class="form-control">
+                
+            
+        
+          
+                        
+                        <textarea name=""placeholder="descrition" id="name"formControlName cols="50" rows="5" class="bg-light"></textarea>
+            
+            </div><br><br>
+            <div class="d-grid">
+                <button class="btn-block btn btn-primary"  type="submit">Envoyer</button>
+
+            </div><br>
+            </div>
+        
+            
+        </div><br><br>
+        
+        </form>
+</div>

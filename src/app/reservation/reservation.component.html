@@ -1,0 +1,63 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="row">
+            <div class="col-sm-4">
+                <img [src]="signupAvatar" alt="">
+            </div>
+            <div class="col-sm-4 offset-sm-3">
+               
+               
+        
+           
+        
+            
+                <div class="form-group">
+                    <label for="name">Nombre de place</label>
+                    <input
+                        formControlName="nbre_place_reserve"
+                        id="nbre_place_reserve"
+                        type="number"
+                        class="form-control">
+                    <div *ngIf="f['nbre_place_reserve'].touched && f['nbre_place_reserve'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['nbre_place_reserve'].errors && f['nbre_place_reserve'].errors['required']">Le nom est requis.</div>
+             
+              
+                        <div *ngIf="f['nbre_place_reserve'].errors && f['nbre_place_reserve'].errors['minlength']">Le nom doit comporter 3 au moins caractères.</div>
+                    </div>
+                </div>
+            
+        
+       
+        
+        
+            
+                <div class="form-group">
+                    <label for="telephone">Telephone</label>
+                    <input
+                        formControlName="telephone"
+                        id="telephone"
+                        type="tel"
+                        class="form-control">
+                    <div *ngIf="f['telephone'].touched && f['telephone'].invalid" class="alert alert-danger">
+                        <div *ngIf="f['telephone'].errors && f['telephone'].errors['required']">L'e-mail est requis.</div>
+                        <div *ngIf="f['telephone'].errors && f['telephone'].errors['telephone']">Veuillez saisir une adresse e-mail valide.</div>
+                    </div>
+                
+            
+        
+          
+              
+            
+            </div><br><br>
+            <div class="d-grid">
+                <button class="btn-block btn btn-primary" [disabled]="form.invalid" type="submit">Envoyer</button>
+
+            </div><br>
+            <p>Vous avez déjà un compte? <a routerLink="/login" class="text-center">Connexion</a></p>
+            </div>
+        
+            
+        </div><br><br>
+        
+        </form>
+</div>

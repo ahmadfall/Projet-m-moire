@@ -1,0 +1,86 @@
+
+/**anim text**/
+.text-anim1::after {
+    background-color: orangered;
+    background-size: cover;
+    font-size: 60px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position:absolute;
+    top: 200px;
+    right: 20px;
+    content:"Touba";
+    animation: textanim1 10s linear infinite;
+    
+   
+  }
+  @keyframes textanim1 {
+    0%   {content:"Sédhiou";}
+    20%  {content:"Dagana";}
+    40%  {content:"Ziguinchor";}
+    60% {content:"Mbour";}
+    80%  {content:"Saint-Louis";}
+    100% {content:"Kaolack";}
+  }
+  /** image animation **/
+  .img-anim {
+    margin-left: 120px;
+  }
+  
+  .text-anim2::after {
+    background-color: orangered;
+    background-size: cover;
+    font-size: 60px;
+    position:absolute;
+    top: 200px;
+    left: 500px;
+    content:"Dakar";
+    animation: textanim2 10s linear infinite;
+    
+   
+  }
+  @keyframes textanim2 {
+    0%   {content:"Thiés";}
+    20%  {content:"Joal";}
+    40%  {content:"Louga";}
+    60%  {content:"Tambacounda";}
+    80% {content:"Bakel";}
+    100% {content:"Kédougou";}
+  }
+  
+  
+  .col-sm-2 {
+    position: relative;
+  }
+  
+  /** images **/
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    
+    background-size: cover;
+    overflow: hidden;
+   
+    height: 0;
+    transition: .5s ease;
+  }
+  
+  .cont:hover .overlay {
+    height: 200px;
+    width: 312px;
+  }
+  
+  .text {
+    white-space: nowrap; 
+    
+    background-color:#259086 ;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }

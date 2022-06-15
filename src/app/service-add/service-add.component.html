@@ -1,0 +1,57 @@
+
+
+  
+<!-- <ul class="services">
+    <li *ngFor="let serviceUpdate of services">--> 
+      
+        <!--
+        <div class="col-sm-3">
+      <div class="card" style="width: 18rem;">
+        
+        <img [src]="bus" alt="">
+        <div class="card-body">
+          <h5 class="card-title">Dakar-Touba</h5>
+          <p class="card-text"> un bus Confortable</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Nombre de Placde: 60</li>
+          <li class="list-group-item">Heure de démarrage: 20h : 15mn</li>
+          <li class="list-group-item">Prix du billet: 2500 FCFA</li>
+        </ul>
+        
+      </div><br>
+      
+      <div class="d-grid">
+        <button class="btn btn-block btn btn-success">Reserver</button>
+      </div>
+    </div>
+    -->
+    <div class="container">
+
+    <div class="row">
+
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;"*ngFor="let serviceUpdate of services">
+        <img src="{{serviceUpdate.image_du_service}}" alt="">
+        <div class="card-body">
+          <h5 class="card-title"> {{ serviceUpdate.Name_Service }} </h5>
+          <p class="card-text">  {{ serviceUpdate.Description_Service }} </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Nombre de Placde:  {{ serviceUpdate.nbre_place }} </li>
+          <li class="list-group-item">Heure de démarrage:  {{ serviceUpdate.heure_depart }} </li>
+          <li class="list-group-item">Prix du billet: {{ serviceUpdate.Prix_du_service }} </li>
+        </ul>
+        
+      </div><br>
+      
+      <div class="d-grid">
+        <button class="btn btn-block btn btn-success">Reserver</button>
+      </div>
+    </div>
+
+    </div>
+
+
+
+</div>

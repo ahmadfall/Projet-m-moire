@@ -1,0 +1,28 @@
+<section>
+     <img [src]="serviceImg" alt="" class="rounded mx-auto d-block" >
+    <div class="row">
+      <div class="col-sm-3 offset-sm-1">
+        <a routerLink="/hotels"><img [src]="sImg1" width="200"height="150" alt = ""></a><br><br><br>
+        <div class=" serviceText">
+          <p> {{ cardServiceText1 }} </p>
+      
+        </div>
+     
+        </div>
+
+      <div class="col-sm-3 offset-sm-1"><a routerLink="/reservation-service-get"><img [src] = "sImg2" alt="" ></a><br><br><br>
+        <div class=" serviceText">
+          <p> {{ cardServiceText2 }} </p>
+          <p class="text-center">Wa Li Neexul !</p>
+        </div>
+       
+      </div>
+
+      <div class="col-sm-3 offset-sm-1"><a routerLink="/car-rental"><img [src] = "sImg3"    alt=""></a><br><br><br>
+        <div class=" serviceText">
+          <p> {{ cardServiceText3 }} </p>
+        </div>
+       
+      </div>
+    </div>
+  </section>

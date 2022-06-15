@@ -1,0 +1,48 @@
+<footer>
+    <div class="row">
+      <div class="col-sm-3 ">
+        <img [src] = "footerImg" class="logo" [width] = "60"[height] = "50" [alt] = "">
+        <p> {{ footerP }}</p>
+      </div>
+      <div class="col-sm-3 text-center pt-2">
+        <h4> {{ footerH4 }} </h4><br>
+        <a > {{ servicesL }}</a><br><br>
+        <a class="text-start"> {{ aboutF }}</a><br><br>
+        <a> {{ faq }}</a>
+      </div>
+      <div class="col-sm-3 text-center pt-2">
+        <h4> {{ footerH41 }} </h4><br>
+        <a> {{ adress }} </a><br><br>
+        <a> {{ tel }} </a><br><br>
+        <a> {{ email }}</a>
+      </div>
+      <div class="col-sm-3 text-center pt-2">
+        <h4> {{ footerH42 }}</h4><br>
+        <form action="" [formGroup]="formNews" (ngSubmit)="onSubmit()">
+          <div class="email-box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="text"  class ="tbox" name="new" id="" placeholder="exemple@gmail.com">
+          <button type="submit" class="btn"> {{ subscribeTxt }}</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="payment-icon float-end">
+      payez avec
+      <img [src] ="free" [alt] ="">
+      <img [src] ="om" [alt] ="">
+      <img [src] ="wave" [alt] = "">
+    </div>
+   
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+    
+    <p class="float-start ml-5">©2022 Sénégal travel Inc.All rights reserved</p>
+    
+  </footer>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button> 

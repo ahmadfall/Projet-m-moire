@@ -1,0 +1,48 @@
+<div class="container">
+    
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <img class="rounded mx-auto d-block" [src]="avatar" width="100"><br><br>
+
+        <div class="col-sm-4 offset-sm-4">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input
+                    formControlName="email"
+                    id="email"
+                    type="text"
+                    class="form-control">
+                <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['email'].errors && f['email'].errors['required']">L'e-mail est requis</div>
+                    <div *ngIf="f['email'].errors && f['email'].errors['email']">Veuillez saisir une adresse e-mail valide.</div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-sm-4 offset-sm-4 ">
+            <div class="form-group">
+                <label for="name">Mot de Passe</label>
+                <input
+                    formControlName="password"
+                    id="password"
+                    type="password"
+                    class="form-control">
+                <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['password'].errors && f['password'].errors['required']">Mot de passe requis.</div>
+         
+          
+                    <div *ngIf="f['password'].errors && f['password'].errors['minlength']">le mot de passe doit comporter 8 caractères.</div>
+                </div>
+            </div>
+        
+        </div>
+    
+    
+   <br><br>
+   <div class="d-grid col-sm-4 offset-sm-4">
+    <button class="btn-block btn btn-primary" [disabled]="form.invalid" type="submit">Envoyer</button><br>
+    <p>Vous n'avez pas encore de compte? <a routerLink="/rgister">S'inscrire</a></p>
+   </div>
+   
+    
+</form> 
+</div>

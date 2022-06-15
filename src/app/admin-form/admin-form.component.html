@@ -1,0 +1,36 @@
+*
+<form action="" [formGroup]="adminProfile" (ngSubmit)="onSubmit()" method="">
+  <div class="row">
+    <div class="col-sm-2 offset-sm-3">
+      <input type="text" formControlName ="name"  class="form-control" placeholder="Nom" name="nom">
+     </div>
+      <div class="col-sm-2 offset-sm-1">
+      <input type="text" formControlName ="firstName"  class="form-control" placeholder="Prenom" name="prenom">
+     </div><br>
+      <div class="col-sm-2 offset-sm-3">
+      <input type="tel" formControlName ="tel"  class="form-control" placeholder="Nbr de bagages" name="nbrbgg">
+     </div>
+      <div class="col-sm-2 offset-sm-1">
+      <input type="number" formControlName="placeNumber"  class="form-control" placeholder="Nombre de place" name="np">
+     </div><br>
+  </div>
+
+  <div class="row">
+     <div class="col-sm-2 offset-sm-3">
+      <input type="text" formControlName ="starTime"  class="form-control" placeholder="Start time" name="prenom">
+     </div><br>
+      <div class="col-sm-2 offset-sm-1">
+      <input type="number" formControlName ="kgNumber"  class="form-control" placeholder="Nbr de bagages" name="nbrbgg">
+ </div>
+      
+  <div class="col-sm-2 offset-sm-3">
+      <select class="form-select"  formControlName="title2" name="selectlist" id="sel1">
+        <option value=""></option>
+        <option *ngFor="let title2 of titleOptions2"> {{ title2 }} </option>
+      
+      </select><br><br>
+      <input type="submit" [disabled]="!adminProfile.valid" class="btn btn-outline-info mx-auto d-block" value="Envoyer">
+
+  </div>
+ </div>
+</form>
