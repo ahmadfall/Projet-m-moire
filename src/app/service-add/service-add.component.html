@@ -28,30 +28,41 @@
     -->
     <div class="container">
 
-    <div class="row">
+  
+<div class="row">
 
     <div class="col-sm-3">
-      <div class="card" style="width: 18rem;"*ngFor="let serviceUpdate of services">
-        <img src="{{serviceUpdate.image_du_service}}" alt="">
+      <div class="card" style="width: 18rem;" *ngFor="let postService of services">
+        <img *ngIf="postService.image" [src]="postService.image" alt="">
+        
         <div class="card-body">
-          <h5 class="card-title"> {{ serviceUpdate.Name_Service }} </h5>
-          <p class="card-text">  {{ serviceUpdate.Description_Service }} </p>
+          <h3 class="card-header text-center">  {{ postService.Name_Service }} </h3>
+          
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">Nombre de Placde:  {{ serviceUpdate.nbre_place }} </li>
-          <li class="list-group-item">Heure de démarrage:  {{ serviceUpdate.heure_depart }} </li>
-          <li class="list-group-item">Prix du billet: {{ serviceUpdate.Prix_du_service }} </li>
+          <h5 class="text-center">Nombre de places</h5>
+         <li class="list-group-item text-center">{{ postService.nbre_place}} </li>
+         <h5 class="text-center">Heure de départ</h5>
+          <li class="list-group-item item text-center"> {{ postService.heure_depart }} </li>
+          <h5 class="text-center">Prix</h5>
+          <li class="list-group-item item text-center">  {{ postService.Prix_du_service}} FCFA </li>
+          <h5 class="text-center">Description</h5>
+          <p class="card-text item text-center">  {{ postService.Description_Service }} </p>
+          <br><br>
+          <div class="d-grid">
+            <button class="btn btn-block btn btn-success" [routerLink]="['/reservation', postService.idService]">Reserver</button>
+            
+          </div>
+          <router-outlet></router-outlet>
+
         </ul>
         
       </div><br>
-      
-      <div class="d-grid">
-        <button class="btn btn-block btn btn-success">Reserver</button>
-      </div>
+     
     </div>
 
-    </div>
+    
 
-
+  </div>
 
 </div>

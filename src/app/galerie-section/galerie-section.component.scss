@@ -22,9 +22,7 @@
     100% {content:"Kaolack";}
   }
   /** image animation **/
-  .img-anim {
-    margin-left: 120px;
-  }
+  
   
   .text-anim2::after {
     background-color: orangered;
@@ -51,27 +49,25 @@
   .col-sm-2 {
     position: relative;
   }
+
+  /** card **/
+  .containe{
+    position: relative;
+    
+  }
+  
+  /* Make the image to responsive */
+ 
+  
+  /* The overlay effect - lays on top of the container and over the image */
+  
+ 
+
   
   /** images **/
   
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left:0;
-    right: 0;
+  
     
-    background-size: cover;
-    overflow: hidden;
-   
-    height: 0;
-    transition: .5s ease;
-  }
-  
-  .cont:hover .overlay {
-    height: 200px;
-    width: 312px;
-  }
-  
   .text {
     white-space: nowrap; 
     
@@ -84,3 +80,32 @@
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
   }
+  .col-sm-2 {
+    position: relative;
+  }
+  .img1{
+    margin-left: 25px;
+  }
+.img3 {
+    margin-left: 25px;
+  }
+ 
+  
+  .img5 {
+    margin-left: 25px;
+  }
+ 
+  .img7{
+    margin-left: 25px;
+  }
+ 
+  .img9 {
+    margin-left: 25px;
+  }
+ 
+  .img11{
+    margin-left: 25px;
+  }
+ 
+ 
+

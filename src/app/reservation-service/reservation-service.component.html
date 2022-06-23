@@ -45,7 +45,7 @@
                          <!--Image du Service-->
 
                     <label for="image_du_service">Image</label>
-                    <input type="file" id="image_du_service" name="image"  formControlName="image_du_service"  class="form-control">
+                    <input type="file" id="image_du_service" name="image"  formControlName="image"  class="form-control">
 
                       <!--Nombre de place-->
 
@@ -62,17 +62,17 @@
                           <!--Heure de depqrt-->
 
                           <label for="heure_depart">heure_depart</label>
-                        <input type="datetime-local" name="heure_depart"formControlName="nbre_place" id="heure_depart" class="form-control">
+                        <input type="datetime-local" name="heure_depart"formControlName="heure_depart" id="heure_depart" class="form-control">
                 
             
         
           
                         
-                        <textarea name=""placeholder="descrition" id="name"formControlName cols="50" rows="5" class="bg-light"></textarea>
+                        <textarea name=""placeholder="descrition" id="name"formControlName="Description_Service" cols="50" rows="5" class="bg-light"></textarea>
             
             </div><br><br>
             <div class="d-grid">
-                <button class="btn-block btn btn-primary"  type="submit">Envoyer</button>
+                <button class="btn-block btn btn-primary" [disabled]="form.invalid">Envoyer</button>
 
             </div><br>
             </div>

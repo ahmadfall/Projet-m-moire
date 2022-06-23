@@ -1,6 +1,6 @@
 export class Reservation {
 
-    _idService!: String;
+    idService!: number;
     telephone!: number;
     nbre_place_reserve!: number;
 }

@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import * as $ from 'jquery';
+//import * as $ from 'jquery';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+    /*
     $(document).ready(function(){
       $(window).scroll(function(){
         if(this.scrollY > 20){
@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
         $(this).toggleClass("active");
         $(".collapse navbar-collapse").toggleClass("active");
       });
-    })
+    })*/
       
     
 

@@ -1,0 +1,29 @@
+<!--
+     <div class="container">
+
+  
+
+
+    <div class="col-sm-3">
+      <div class="card" style="width: 18rem;" *ngFor="let postService of services">
+        <img *ngIf="postService.du_service" [src]="postService.du_service" alt="">
+        
+        <div class="card-body">
+          <h5 class="card-title"> Horaire: {{ postService.Name_Service }} </h5>
+          <p class="card-text"> Description: {{ postService.Description_Service }} </p>
+        </div>
+        <ul class="list-group list-group-flush">
+         <li class="list-group-item">Nombre de place: {{ postService.nbre_place}} </li>
+          <li class="list-group-item">Heure de Départ: {{ postService.heure_depart }} </li>
+          <li class="list-group-item"> Prix: {{ postService.Prix_du_service}} </li>
+          <br><br>
+          <div class="d-grid">
+            <button class="btn btn-block btn btn-success" [routerLink]="['/reservation', postService.idService]">Reserver</button>
+            
+          </div>
+          <router-outlet></router-outlet>
+
+        </ul>
+        
+      </div><br>
+-->

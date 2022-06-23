@@ -19,6 +19,7 @@ export class RegisterComponent implements OnInit {
     private router: Router,
     private ngZone: NgZone,
     private crudService: CrudService
+    
   ) { }
   users: Config[] = [];
  
@@ -39,6 +40,9 @@ export class RegisterComponent implements OnInit {
     Validators.minLength(8)]
    ]
   });
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
    
   get f(){
     return this.form.controls;
@@ -55,7 +59,12 @@ export class RegisterComponent implements OnInit {
 
   submit() {
     this.crudService.AddUser(this.form.value)
-    .subscribe(config => this.users.push(config));
+    .subscribe(data => 
+      {
+        console.log(data);
+        
+      },
+      );
     console.log('Post created successfully!');
     this.router.navigateByUrl('dashboard');
     

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,16 +29,20 @@ import { EditPasswordComponent } from './edit-password/edit-password.component';
 import { ServiceComponent } from './service/service.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { ReservationServiceComponent } from './reservation-service/reservation-service.component';
-import { UsersListComponent } from './users-list/users-list.component';
 import { HotelsComponent } from './hotels/hotels.component';
 import { ServiceAddComponent } from './service-add/service-add.component';
 import { PostTestimonialComponent } from './post-testimonial/post-testimonial.component';
 import { CrudService } from './_services/crud.service';
+import { UpdatePasswordComponent } from './update-password/update-password.component';
+import { TestimonialPostComponent } from './testimonial-post/testimonial-post.component';
+import { AuthInterceptor } from './_helpers/auth.interceptor';
+import { ProfileComponent } from './profile/profile.component';
+import { CommandesComponent } from './commandes/commandes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-  
+
     HeaderComponent,
     HeroHeaderComponent,
     ServiceSectionComponent,
@@ -61,25 +65,28 @@ import { CrudService } from './_services/crud.service';
     ServiceComponent,
     ReservationComponent,
     ReservationServiceComponent,
-    UsersListComponent,
     HotelsComponent,
     ServiceAddComponent,
     PostTestimonialComponent,
-   
-    
-    
+    UpdatePasswordComponent,
+    TestimonialPostComponent,
+    ProfileComponent,
+    CommandesComponent,
+
+
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    
+
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
- 
-  
+
+
   ],
-  providers: [CrudService],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor,multi:true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

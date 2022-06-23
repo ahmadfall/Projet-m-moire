@@ -79,6 +79,8 @@ export class FooterComponent implements OnInit {
   }
   onSubmit() {
     // TODO!: Use EventEmitter with form value
+   // href="mailto:name@email.com"
+   window.open("mailto:ahmadseck99@gmail.com")
     console.warn('donné du formulaire',this.formNews.value);
   }
   

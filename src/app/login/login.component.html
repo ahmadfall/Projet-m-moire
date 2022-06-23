@@ -33,14 +33,14 @@
                     <div *ngIf="f['password'].errors && f['password'].errors['minlength']">le mot de passe doit comporter 8 caractères.</div>
                 </div>
             </div>
-        
+          
         </div>
     
     
    <br><br>
    <div class="d-grid col-sm-4 offset-sm-4">
-    <button class="btn-block btn btn-primary" [disabled]="form.invalid" type="submit">Envoyer</button><br>
-    <p>Vous n'avez pas encore de compte? <a routerLink="/rgister">S'inscrire</a></p>
+    <button class="btn-block btn btn-primary" [disabled]="form.invalid" >Envoyer</button><br>
+    <p>Vous n'avez pas encore de compte? <a routerLink="/register">S'inscrire</a></p>
    </div>
    
     

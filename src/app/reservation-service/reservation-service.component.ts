@@ -32,7 +32,7 @@ export class ReservationServiceComponent implements OnInit {
 Prix_du_service: ['', 
 [Validators.required]
 ],
-image_du_service: ['', 
+image: ['', 
 [Validators.required]
 ],
 nbre_place: ['', 
@@ -57,14 +57,18 @@ heure_depart: ['',
   }
 
   submit() {
-    this.crudService.serviceUpdate(this.form.value)
-    .subscribe(() => {
-        console.log('Data added successfully!')
-       this.router.navigateByUrl('/login')
-         
-      }, (err) => {
-        console.log(err);
-    });
+    this.crudService.addServices(this.form.value)
+    .subscribe(data => 
+      {
+        console.log(data);
+        
+        
+      },
+      
+      );
+      console.log(this.form.value)
+    console.log('Post created successfully!');
+   // this.router.navigateByUrl('dashboard');
     
   }
 
